@@ -1,0 +1,74 @@
+.footer {
+    width: 100vw;  /* Ensures full width */
+    padding: 40px 90px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Arial, sans-serif;
+    background: #141414;
+    box-sizing: border-box; /* Ensures padding does not cause overflow */
+}
+
+.call {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* List container */
+.linksList {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 10px 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.linksList li {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.linksList li:hover {
+    text-decoration: underline;
+}
+
+/* Medium screens: Two columns */
+@media (max-width: 900px) {
+    .linksList {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+/* Small screens: One column */
+@media (max-width: 600px) {
+    .linksList {
+        grid-template-columns: repeat(1, 1fr); /* One column */
+    }
+}
+
+
+/* Language Selector */
+.languageSelector {
+    margin-top: 20px;
+}
+
+.languageSelector select {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Footer Text */
+.footerText {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.linksList li,.linksList,.languageSelector,.footer{
+    background: rgba(0, 0, 0, 0);
+}
+/* Responsive Design */

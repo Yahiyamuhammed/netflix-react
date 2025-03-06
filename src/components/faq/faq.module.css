@@ -1,0 +1,47 @@
+.faqContainer {
+    margin: 40px 10vw;
+    
+}
+
+.heading {
+    color: white;
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* FAQ List */
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* FAQ Item */
+.faqItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(45, 45, 45);
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    height: 50px;
+}
+
+/* Hover effect */
+.faqItem:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+/* Plus (+) Symbol */
+.plus {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.plus ,.faqList ,.span{
+    background: rgba(0, 0, 0, 0);
+}

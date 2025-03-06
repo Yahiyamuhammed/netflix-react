@@ -1,0 +1,84 @@
+.div {
+    margin: 20px 90px;
+}
+
+/* Left-align the heading */
+.heading {
+    color: white;
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Cards Layout */
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distributes items evenly */
+    gap: 20px; /* Space between cards */
+}
+
+/* Each Card */
+.card {
+    background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
+    padding: 20px;
+    min-height: 25vh;
+    border-radius: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    flex: 0 0 calc(50% - 10px);  /* Two cards per row, changed from flex: 1 1 */
+    max-width: calc(50% - 10px); /* Ensures 2 per row */
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+/* Title inside each card */
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+/* Icon at bottom right */
+.icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+    opacity: 0.9;
+}
+h3, p ,.icon {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Responsive: One card per row on smaller screens */
+@media (max-width: 768px) {
+    .div {
+        margin: 20px 20px; /* Reduce side margins on mobile */
+    }
+    
+    .card {
+        flex: 0 0 100%; /* Full width for single column layout */
+        max-width: 100%;
+        margin-bottom: 15px; /* Add space between stacked cards */
+    }
+    
+    .cardContainer {
+        gap: 15px; /* Slightly reduce gap on mobile */
+    }
+}
+
+/* Medium sized screens - still 2 cards but with adjusted sizing */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .div {
+        margin: 20px 40px; /* Reduce side margins slightly */
+    }
+}

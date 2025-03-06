@@ -1,0 +1,100 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0); /* 🔹 Adds a dark semi-transparent background */
+    border-radius: 10px; /* 🔹 Smooth rounded edges */
+}
+
+
+.textOverlay h1 {
+    font-size: 2.5rem;  /* Reduce font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.textOverlay h2 {
+    font-size: 1.3rem;  /* Reduce font size */
+    font-weight: 400;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.textOverlay p {
+    font-size: 1rem;  /* Reduce font size */
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 60%;  /* Reduce input width */
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .textOverlay h1 {
+        font-size: 2rem;
+    }
+
+    .textOverlay h2 {
+        font-size: 1.2rem;
+    }
+
+    .textOverlay p {
+        font-size: 1rem;
+    }
+
+    .input {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

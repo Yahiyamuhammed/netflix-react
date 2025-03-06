@@ -1,0 +1,21 @@
+.trendingContainer {
+    display: flex;
+    
+    
+    margin:0 100px;
+    gap: 25px; /* Space between cards */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+    padding: 10px;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.trendingContainer::-webkit-scrollbar {
+    display: none;
+}
+.trendingTitle
+{
+    color: white;
+    margin: 10px 90px;
+}

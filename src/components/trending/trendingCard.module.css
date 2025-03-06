@@ -1,0 +1,46 @@
+.card {
+    position: relative;
+    flex: 0 0 150px; /* Ensures a fixed width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.movieImage {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Number Rank */
+.rank {
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: black;
+    text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+    background: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* 🔹 Reduce card size when hovering */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Decrease card size slightly on smaller screens */
+@media (max-width: 800px) {
+    .card {
+        flex: 0 0 130px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex: 0 0 110px;
+    }
+}
